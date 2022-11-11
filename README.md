@@ -14,34 +14,37 @@ Note: Currently, only LPs in standard form are supported.
 ###### 1. Standard Form Maximization LP
 
 Consider the following objective function and constraints:
+F = 32x1 + 30x2 + 35x3 +30x4 +20x5
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/MichaelStott/SimplexSolver/master/img/example1a.png">
-</p>
-<p align="center">
-<img src="https://raw.githubusercontent.com/MichaelStott/SimplexSolver/master/img/example1b.png">
-</p>
+2x1 + x2 + 5x3 + 3x5 <= 100
+2x2 <= 80
+2x3 + x4 <= 85
+7x1 + 2x4 + x5 <= 200
+2x2 + 10x3 + x5 <= 100
+
 This problem can be solved by running the script with the following parameters:
 
 ```sh
-$ python simplex.py -A "[[2,1],[1,2]]" -b "[4,3]" -c "[1,1]" -p max
+$ python run.py
 ```
 
 ###### 2. Standard Form Minimization LP
 
 Consider the following objective function and constraints:
+F = 150x1 + 104x2 + 69x3 +167x4 + 1x5
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/MichaelStott/SimplexSolver/master/img/example2a.png">
-</p>
-<p align="center">
-<img src="https://raw.githubusercontent.com/MichaelStott/SimplexSolver/master/img/example2b.png">
-</p>
+18x1 + 23x3 + 83.5x3 + x5 >= 500
+37x1 + 52x2 >= 360
+27x1 + 52x2 +23x3 + 41.75x4 + x5 >= 400
+75x1 + x5 >= 300
+23x3 + 41.75x4 >= 300
+
 This problem can be solved by running the script with the following parameters:
 
 ```sh
-$ python simplex.py -A "[[2,1],[1,1]]" -b "[6,4]" -c "[3,2]" -p min
+$ python run.py
 ```
+
 
 [here]: <https://latexbase.com/>
 
